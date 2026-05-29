@@ -1,0 +1,90 @@
+:root {
+  --card-bg: rgb(20, 20, 20);
+  --card-text: white;
+  --card-button-bg: rgb(255, 255, 255);
+  --card-button-text: rgb(20, 20, 20);
+  --card-button-hover-bg: rgb(200, 200, 200);
+  --nav-bg: rgb(240, 240, 240);
+  --nav-text: rgb(20, 20, 20);
+  --main-bg: rgb(230, 230, 230);
+  --main-text: rgb(20, 20, 20);
+}
+
+body {
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+nav {
+  width: 100%;
+  text-align: center;
+  background-color: var(--nav-bg);
+  color: var(--nav-text);
+}
+
+.main {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  background-color: var(--main-bg);
+  color: var(--main-text);
+}
+.main .card {
+  display: inline-block;
+  margin: 5px;
+  width: 200px;
+  text-align: center;
+  background-color: var(--card-bg);
+  color: var(--card-text);
+  padding: 10px;
+  border-radius: 5px;
+}
+.main .card > * {
+  margin-bottom: 5px;
+}
+.main .card img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+.main .card button {
+  padding: 7.5px 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--card-button-bg);
+  color: var(--card-button-text);
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+.main .card button:hover {
+  background-color: var(--card-button-hover-bg);
+}
+.main .card p {
+  position: relative;
+  height: 0px;
+  overflow: hidden;
+  transition: height 0.2s ease;
+  margin: 0;
+}
+.main .card p[open] {
+  height: auto;
+}
+
+/*# sourceMappingURL=index.css.map */

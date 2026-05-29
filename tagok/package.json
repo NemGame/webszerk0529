@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "sass": "^1.100.0",
+    "typescript": "^6.0.3"
+  },
+  "scripts": {
+    "build": "npx tsc & npx sass src/sass:dist/css",
+    "watch": "start cmd /k npx tsc --watch & start cmd /k npx sass --watch src/sass:dist/css",
+    "install": "npm install typescript sass"
+  }
+}

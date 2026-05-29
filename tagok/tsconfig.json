@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        /* Target and Environment */
+        "target": "ES2022",                               /* Output modern JavaScript features */
+        "lib": ["DOM", "DOM.Iterable", "ES2022"],        /* APIs available in the browser/runtime */
+
+        /* Modules & Resolution */
+        "module": "ESNext",                               /* Use modern ES Modules syntax */
+        "moduleResolution": "bundler",                    /* 👈 FIX 1: Helps TS find files */
+        "moduleDetection": "force",                       /* 👈 FIX 2: Treats files as modules */    
+
+        /* Strictness & Safety */
+        "strict": true,                                   /* Enable all strict type-checking options */
+        "noUncheckedIndexedAccess": true,                 /* Enforces checking for undefined array lookups */
+        "noImplicitOverride": true,                       /* Requires 'override' keyword in subclasses */
+        "skipLibCheck": true,                             /* Skip type checking of declaration files (.d.ts) */
+
+        /* Directory Settings */
+        "rootDir": "./src/ts",    /* Tells TS where your source files live */
+        "outDir": "./dist/js",    /* Tells TS where to put compiled JS files */
+    },
+    "include": ["src/ts/**/*.ts"]                             /* Only parse files in the src folder */
+}
