@@ -56,7 +56,7 @@ function App() {
   // Or do we filter first? If we filter first, the previous fillup might be excluded, ruining the calculation for the first element in the filtered view.
   // It's better to calculate stats on ALL refuelings, THEN filter the Displayable stats!
   const stats = useMemo(() => calculateStats(refuelings), [refuelings]);
-  
+
   const filteredStats = useMemo(() => {
     return stats.filter(s => {
       if (dateFrom && s.original.date < dateFrom) return false;
@@ -72,8 +72,8 @@ function App() {
         <p>Kövesd nyomon tankolásaidat, költségeidet és átlagfogyasztásod</p>
       </header>
 
-      <div className="image-placeholder">
-        <p>Ide kerülhet a te saját vagy autód képe</p>
+      <div className="hero-section">
+        <img src="https://www.keystonepetroleumequipment.com/wp-content/uploads/2018/08/station-retrofit-feature.jpg" alt="Benzinkút" className="hero-image" />
       </div>
 
       <div className="card" style={{ marginBottom: '1.5rem' }}>
@@ -81,25 +81,25 @@ function App() {
         <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
           <div className="form-group" style={{ flex: 1, marginBottom: 0 }}>
             <label className="form-label">-Tól</label>
-            <input 
-              type="date" 
-              className="form-input" 
-              value={dateFrom} 
-              onChange={e => setDateFrom(e.target.value)} 
+            <input
+              type="date"
+              className="form-input"
+              value={dateFrom}
+              onChange={e => setDateFrom(e.target.value)}
             />
           </div>
           <div className="form-group" style={{ flex: 1, marginBottom: 0 }}>
             <label className="form-label">-Ig</label>
-            <input 
-              type="date" 
-              className="form-input" 
-              value={dateTo} 
-              onChange={e => setDateTo(e.target.value)} 
+            <input
+              type="date"
+              className="form-input"
+              value={dateTo}
+              onChange={e => setDateTo(e.target.value)}
             />
           </div>
           <div style={{ display: 'flex', alignItems: 'flex-end', marginBottom: '0.2rem' }}>
-            <button 
-              className="btn" 
+            <button
+              className="btn"
               onClick={() => { setDateFrom(''); setDateTo(''); }}
               style={{ backgroundColor: 'var(--border-color)' }}
             >
@@ -116,7 +116,7 @@ function App() {
             <MonthlySpending refuelings={filteredRefuelings} />
           </div>
         </div>
-        
+
         <div className="right-column">
           <RefuelingList stats={filteredStats} />
         </div>
