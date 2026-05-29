@@ -7,6 +7,8 @@
         <style>
             body {
                 font-family: Helvetica, sans-serif;
+                background-color: black;
+                color: white;
             }
             main {
                 position: absolute;
@@ -22,13 +24,18 @@
                     width: 50%;
                     display: grid;
                     place-items: center;
+                    cursor: pointer;
+                    transition: background-color 0.2s;
+                    &:hover {
+                        background-color: rgb(40, 40, 40);
+                    }
                 }
             }
         </style>
     </head>
     <body>
         <main>
-            <div>
+            <div onclick="window.open('tagok/', '_self')">
                 Tagok (1.)
             </div>
             <div>
