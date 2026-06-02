@@ -13,15 +13,20 @@ class CardData {
         const name = document.createElement("h3");
         name.textContent = this.name;
         const button = document.createElement("button");
-        button.textContent = "+";
+        button.textContent = "Bemutatkozás";
+        const span = document.createElement("span");
+        span.textContent = "↓";
+        button.appendChild(span);
         const p = document.createElement("p");
         p.textContent = this.description;
 
         button.onclick = () => {
             if (p.style.height && p.style.height !== '0px') {
                 p.style.height = '0px';
+                span.style.transform = "rotate(0deg)";
             } else {
                 p.style.height = p.scrollHeight + 'px';
+                span.style.transform = "rotate(-180deg)";
             }
             p.toggleAttribute("open");
         }

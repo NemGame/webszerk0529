@@ -47,6 +47,7 @@ nav {
   color: var(--main-text);
 }
 .main .card {
+  vertical-align: top;
   display: inline-block;
   margin: 5px;
   width: 200px;
@@ -65,16 +66,24 @@ nav {
   border-radius: 5px;
 }
 .main .card button {
-  padding: 7.5px 10px;
+  padding: 7.5px 20px 7.5px 10px;
   border: none;
   border-radius: 10px;
   background-color: var(--card-button-bg);
   color: var(--card-button-text);
   transition: background-color 0.2s ease;
+  position: relative;
   cursor: pointer;
 }
 .main .card button:hover {
   background-color: var(--card-button-hover-bg);
+}
+.main .card button span {
+  position: absolute;
+  top: 7px;
+  right: 10px;
+  transform: rotate(0deg);
+  transition: transform 0.2s ease;
 }
 .main .card p {
   position: relative;
@@ -82,6 +91,7 @@ nav {
   overflow: hidden;
   transition: height 0.2s ease;
   margin: 0;
+  word-break: break-all;
 }
 .main .card p[open] {
   height: auto;

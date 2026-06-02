@@ -1,0 +1,2 @@
+Buildelés: npm run build
+Utána: Minden "/assets..." -ot "assets..." -ra kell cserélni a dist/index.html-ben
